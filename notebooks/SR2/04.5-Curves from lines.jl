@@ -1,11 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
 
 # ╔═╡ a6c3f6dc-bd11-4316-a9ec-8d72c94e6a4c
 using Pkg
+
+# ╔═╡ 47eb0509-fd58-45c9-9d39-ada8d37bb76a
+#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ 4ade84b6-fc0b-11ea-06ff-9517579c812c
 begin
@@ -27,7 +30,7 @@ end
 md" ## 4.5 - Curves from lines."
 
 # ╔═╡ 38a1cbef-a70e-4bd4-ab96-6b86f93113e3
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ 5f30641d-2c85-4712-a853-2992071ddbbc
 html"""
@@ -42,10 +45,7 @@ html"""
 """
 
 # ╔═╡ 5433c67d-6294-4984-9490-04e4a0edeb7a
-md" ### Julia code snippet 4.64"
-
-# ╔═╡ 47eb0509-fd58-45c9-9d39-ada8d37bb76a
-#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
+md" #### Julia code snippet 4.64"
 
 # ╔═╡ 4af00a44-fc0b-11ea-080c-e9f7bc30a1b1
 begin
@@ -57,7 +57,7 @@ begin
 end
 
 # ╔═╡ 4af06c94-fc0b-11ea-128c-89bea7c3af63
-md"##### Define the Stan language model."
+md" ##### Define the Stan language model."
 
 # ╔═╡ 4afd2eb8-fc0b-11ea-2f26-7329e44823a5
 stan4_5 = "
@@ -88,10 +88,10 @@ model{
 ";
 
 # ╔═╡ f2e57abf-36d2-4aae-9176-23ff30630d7b
-md" ### Julia code snippet 4.65"
+md" #### Julia code snippet 4.65"
 
 # ╔═╡ 4afec1ea-fc0b-11ea-1674-b59e51b9f027
-md"##### Define the SampleModel, etc,"
+md" ##### Define the SampleModel, etc,"
 
 # ╔═╡ c0c5b9c9-9ead-4a73-a42c-cb0761e27355
 let
@@ -109,7 +109,7 @@ let
 end
 
 # ╔═╡ 67c95124-c98c-425d-b809-aaefdde83385
-md" ### Julia code snippet 4.66"
+md" #### Julia code snippet 4.66"
 
 # ╔═╡ 4b0b60fa-fc0b-11ea-3929-0f0077415fc7
 let
@@ -128,7 +128,7 @@ let
 end
 
 # ╔═╡ 017a4e0a-cee7-4425-b321-363e02a7ee09
-md" ### Julia code snippet 4.67"
+md" #### Julia code snippet 4.67"
 
 # ╔═╡ bd0521fc-4967-490d-842e-9660215c4949
 let
@@ -155,7 +155,7 @@ sigma   5.77 0.18   5.49   6.06
 ";
 
 # ╔═╡ 5ed82af0-ff8b-4314-9619-2b072bb46d72
-md" ### Julia code snippet 4.68"
+md" #### Julia code snippet 4.68"
 
 # ╔═╡ 66c18c7c-0bfc-4299-92cc-052819b1aea9
 model_summary(quap4_5s_1_df, [:alpha, :beta1, :sigma])
@@ -167,7 +167,7 @@ model_summary(quap4_5s_2_df, [:alpha, :beta1, :beta2, :sigma])
 model_summary(quap4_5s_3_df, [:alpha, :beta1, :beta2, :beta3, :sigma])
 
 # ╔═╡ 4b2109c8-fc0b-11ea-0aed-2b80f6b14188
-md"### Julia code snippets 4.69"
+md" #### Julia code snippets 4.69"
 
 # ╔═╡ 869225aa-b050-48fe-aa5e-7e6f7450f0ea
 let
@@ -204,7 +204,7 @@ let
 end
 
 # ╔═╡ 02467ecb-1d9a-4daf-92ba-bdd827352f7a
-md" ### Julia code snippet 4.71"
+md" #### Julia code snippet 4.71"
 
 # ╔═╡ 8d2760a0-7fb4-4c59-bc31-dd095221a3ad
 let
@@ -256,7 +256,7 @@ let
 end
 
 # ╔═╡ 7a1666f9-1f5e-419f-b472-5643a0f3ce20
-md" ### Julia code snippet 4.72"
+md" #### Julia code snippet 4.72"
 
 # ╔═╡ 553c775e-d249-4d9c-a83c-10c21c970110
 begin
@@ -294,7 +294,7 @@ let
 end
 
 # ╔═╡ 53e977f8-a245-4101-9395-c9cacb1a5ca7
-md"## snippet 4.76"
+md" ## snippet 4.76"
 
 # ╔═╡ 6175ab8f-8d70-4e11-950a-210796ee62fe
 stan4_7 = "
@@ -346,7 +346,7 @@ begin
 end
 
 # ╔═╡ d50b4ff5-f472-48aa-8dd7-27d14930bcae
-md"### snippet 4.77"
+md" ### snippet 4.77"
 
 # ╔═╡ e4154abf-3510-478b-b006-a3cd1139519c
 begin
@@ -363,7 +363,7 @@ begin
 end
 
 # ╔═╡ d506d2cd-628e-464e-b510-b8c51b37cb40
-md"### snippet 4.78"
+md" ### snippet 4.78"
 
 # ╔═╡ 2f44287f-790c-4141-a406-bb24bef30879
 let
@@ -379,7 +379,7 @@ let
 end
 
 # ╔═╡ 75ecc407-8451-4c33-b681-c50bc00c1546
-md"## End of clip-04-72-79s.jl"
+md" ## End of clip-04-72-79s.jl"
 
 # ╔═╡ Cell order:
 # ╟─48df2a12-f043-426d-b06b-ed013365df02

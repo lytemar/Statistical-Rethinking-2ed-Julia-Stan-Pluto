@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
@@ -25,7 +25,7 @@ end
 md" ## Chapter 4.1 -  Why normal distributions are normal."
 
 # ╔═╡ 81f005ef-d776-4fba-9a03-1d129ae9938f
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ 20496ba3-cc57-4ea2-9862-47858cbada17
 html"""
@@ -43,7 +43,7 @@ html"""
 #Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ ca213187-aedf-49b7-9393-607bf6a4f08e
-md"### Julia code snippet 4.1"
+md" #### Julia code snippet 4.1"
 
 # ╔═╡ 7e540553-aa29-477b-a42f-12a4f93ea4cd
 let
@@ -51,7 +51,7 @@ let
 end
 
 # ╔═╡ 497d10d9-2553-4d04-b79a-f5281c500bb6
-md"#### Fig4.2."
+md" #### Fig4.2."
 
 # ╔═╡ 142d846a-610f-4308-8622-be0f589374ba
 begin
@@ -63,7 +63,7 @@ begin
 end;
 
 # ╔═╡ 1918943f-11ca-47f0-8ec8-6723656dcaad
-md"##### Plot and annotate the random walks."
+md" ##### Plot and annotate the random walks."
 
 # ╔═╡ 2198aa92-300a-4503-a3cf-52eaa6f99b61
 let
@@ -88,16 +88,16 @@ end
 	
 
 # ╔═╡ 6e397b9c-f0e8-4146-925b-e281d8a2c040
-md"##### Generate 3 plots of densities at 3 different step numbers (4, 8 and 16)."
+md" ##### Generate 3 plots of densities at 3 different step numbers (4, 8 and 16)."
 
 # ╔═╡ 6edc4101-78b3-434b-a03b-2c5915742661
-md"### Julia code snippet 4.2"
+md" #### Julia code snippet 4.2"
 
 # ╔═╡ c5806d51-9be6-49e1-9b95-bca5be15a33b
 prod(1 .+ rand(Uniform(0, .1), 12))
 
 # ╔═╡ bc7b4b29-3fb5-4b05-9701-45c0631c92ae
-md"### Julia code snippet 4.3"
+md" #### Julia code snippet 4.3"
 
 # ╔═╡ 56163c82-7652-4449-9204-b062c3853167
 let
@@ -114,7 +114,7 @@ let
 end
 
 # ╔═╡ 713faf3d-2a06-4683-b6fd-b161b920a21e
-md"### Julia code snippet 4.4 and 4.5"
+md" #### Julia code snippet 4.4 and 4.5"
 
 # ╔═╡ 025c8b62-eaff-41ad-8bb6-6b575b8a2445
 let

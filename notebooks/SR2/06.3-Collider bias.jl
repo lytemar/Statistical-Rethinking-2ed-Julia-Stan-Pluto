@@ -35,7 +35,7 @@ end
 md" ## 6.3 Collider bias."
 
 # ╔═╡ 234d835c-b651-4b16-9f2e-986eda90a1a8
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ fbc882d4-18b0-4f08-a1b1-ec4c4f78635d
 html"""
@@ -51,7 +51,7 @@ html"""
 
 
 # ╔═╡ 6d0bdac8-a453-4574-841c-6dee7b99a053
-md"## Julia code snippet 6.21"
+md" ## Julia code snippet 6.21"
 
 # ╔═╡ 4659c3bc-9677-4703-8a68-f1bd546efa8e
 function sim_happiness2(; seed=1977, n_years=1000, max_age=65, n_births=20, aom=18)
@@ -94,7 +94,7 @@ let
 end
 
 # ╔═╡ cfadd300-c683-47d1-9d57-5764b20ea797
-md" ### Julia code snippet 6.22"
+md" #### Julia code snippet 6.22"
 
 # ╔═╡ 030a38f8-5728-43bf-9792-fa3d7d5517c0
 let
@@ -106,7 +106,7 @@ let
 end
 
 # ╔═╡ 1a627fb5-3ca8-4157-9496-fdd35b4c8f1c
-md" ### Julia code snippet 6.23"
+md" #### Julia code snippet 6.23"
 
 # ╔═╡ 6bae9ac8-6ca2-47e9-af4c-ceb5263318bf
 df2.mid = df2.married .+ 1;
@@ -163,7 +163,7 @@ let
 end
 
 # ╔═╡ d1338a23-cf1d-4041-b479-eb20d96c14e3
-md" ### Julia code snippet 6.24"
+md" #### Julia code snippet 6.24"
 
 # ╔═╡ 4956ef6f-fbcc-4b89-b517-82e558983cc1
 stan6_10 = "
@@ -197,7 +197,7 @@ let
 end
 
 # ╔═╡ c09c597f-6644-4994-9ccf-894dbcb1a36c
-md" ### Julia code snippet 6.25 and 6.26"
+md" #### Julia code snippet 6.25 and 6.26"
 
 # ╔═╡ 76f8fb35-e3c8-437b-8f83-bc2bed62184f
 let
@@ -214,7 +214,7 @@ let
 end
 
 # ╔═╡ 29bdd1fd-1ad7-4aa5-9f2f-6657e8651bec
-md" ### Julia code snippet 6.27"
+md" #### Julia code snippet 6.27"
 
 # ╔═╡ f8289a9a-8548-464e-b32a-6aaf1eb5c387
 stan6_11 = "
@@ -287,7 +287,7 @@ let
 end
 
 # ╔═╡ 393b33bc-130a-45c4-ac42-578d9dccf135
-md" ### Julia code snippet 6.28"
+md" #### Julia code snippet 6.28"
 
 # ╔═╡ 0057e16c-ea97-4a8c-a888-b27f2d08f344
 stan6_12 = "

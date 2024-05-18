@@ -23,10 +23,10 @@ begin
 end
 
 # ╔═╡ 1df2d09b-7860-4acc-9d38-665107152a43
-md"## 8.3 Continuous interaction"
+md" ## 8.3 Continuous interaction"
 
 # ╔═╡ c351bdae-93b0-4da4-b5d9-52d54cf75f16
-md"### Code 8.19"
+md" ### Code 8.19"
 
 # ╔═╡ ecd48461-e555-48f6-bde0-60f0a5366eb5
 begin
@@ -38,7 +38,7 @@ end
 tulips
 
 # ╔═╡ c5917b74-37da-46f2-993c-ee07c4a11275
-md"## Code 8.20"
+md" ## Code 8.20"
 
 # ╔═╡ deb4cbe4-c54f-4f63-a51b-d6f50fc84526
 begin
@@ -50,7 +50,7 @@ begin
 end;
 
 # ╔═╡ 547a6c98-9abe-4841-973c-a18eefc8a466
-md"### Code 8.21"
+md" ### Code 8.21"
 
 # ╔═╡ eff79e1c-6578-41da-9088-d48cafd6116d
 let
@@ -60,7 +60,7 @@ let
 end
 
 # ╔═╡ 3472f887-f38c-49c4-aff0-b8e6529cd68f
-md"### Code 8.22"
+md" ### Code 8.22"
 
 # ╔═╡ 58700f15-d848-4e71-bd95-8020eda97993
 let
@@ -70,7 +70,7 @@ let
 end
 
 # ╔═╡ bf287860-1590-45ab-8377-08b12e48aae1
-md"### Code 8.23"
+md" ### Code 8.23"
 
 # ╔═╡ cb92360e-de69-45f7-8bd3-b1cc3df6e36e
 stan8_4 = "
@@ -107,7 +107,7 @@ begin
 end
 
 # ╔═╡ 3bd5b2ee-ab4e-474d-8520-2a7e6c3b20c0
-md"### Code 8.24"
+md" ### Code 8.24"
 
 # ╔═╡ 2a8bc878-115e-46ea-814c-af138f82a8dd
 stan8_5 = "
@@ -149,7 +149,7 @@ begin
 end
 
 # ╔═╡ 6d82ff1b-16a8-4da4-8820-152dbc76bbe5
-md"### Code 8.25"
+md" ### Code 8.25"
 
 # ╔═╡ 28beb1b8-5b06-4183-bc65-139bd40a581e
 let
@@ -196,7 +196,7 @@ let
 end
 
 # ╔═╡ 539cef32-4ab8-401a-95e9-a3d0c04f99ed
-md"### Code 8.26"
+md" ### Code 8.26"
 
 # ╔═╡ 02f75016-dc94-40ed-b38c-125bc3b8847f
 let

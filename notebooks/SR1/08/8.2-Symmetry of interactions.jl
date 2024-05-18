@@ -23,7 +23,7 @@ begin
 end
 
 # ╔═╡ f2d9ff1d-11c6-4fd7-8f6e-411072999d42
-md"## 8.2 Symmetry of interations"
+md" ## 8.2 Symmetry of interations"
 
 # ╔═╡ ecd48461-e555-48f6-bde0-60f0a5366eb5
 begin
@@ -88,20 +88,20 @@ begin
 end;
 
 # ╔═╡ 6f9040ff-b65a-4859-b393-ddcf0983e0fe
-md"### Code 8.14"
+md" ### Code 8.14"
 
 # ╔═╡ 885619ae-7f62-4c46-8954-151bd23e7836
 describe(post8_3s_df[:, [Symbol("a.1"), Symbol("a.2"), 
 	Symbol("b.1"), Symbol("b.2"), :sigma]])
 
 # ╔═╡ f416b40e-84a4-4d0c-92dc-8284472fbe48
-md"### Code 8.15"
+md" ### Code 8.15"
 
 # ╔═╡ e378e58f-3476-458b-875c-ceed69026c13
-md"### Code 8.16"
+md" ### Code 8.16"
 
 # ╔═╡ 965017a8-daf7-433a-8b7f-b7c4b942bec8
-md"### Code 8.17"
+md" ### Code 8.17"
 
 # ╔═╡ 7cd45d1d-f93f-4947-83aa-4dea9d82b633
 let
@@ -136,7 +136,7 @@ let
 end
 
 # ╔═╡ 15726386-60f3-43af-b3fd-b63af456f9f7
-md"### Code 8.18"
+md" ### Code 8.18"
 
 # ╔═╡ b4479775-7eda-485f-8fb7-93e471a5fcc2
 let

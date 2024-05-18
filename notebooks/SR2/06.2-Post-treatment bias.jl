@@ -36,7 +36,7 @@ end
 md" ## 6.2 Post-treatment bias."
 
 # ╔═╡ 234d835c-b651-4b16-9f2e-986eda90a1a8
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ fbc882d4-18b0-4f08-a1b1-ec4c4f78635d
 html"""

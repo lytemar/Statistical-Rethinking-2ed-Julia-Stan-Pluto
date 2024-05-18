@@ -31,10 +31,10 @@ begin
 end
 
 # ╔═╡ 00d5774b-5ef0-4d01-b21d-1749beec466a
-md"## GES explorations."
+md" ## GES explorations."
 
 # ╔═╡ bd8e4305-bb79-409b-9930-e11e579b8cd0
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ da00c7fe-43ff-4e3a-ab43-0dfd9444f779
 html"""

@@ -1,3 +1,11 @@
+## Note
+
+After many years I have decided to step away from my work with Stan and Julia. My plan is to be around until the end of 2024 for support if someone decides to step in and take over further development and maintenance work.
+
+At the end of 2024 I'll archive the different packages and projects included in the Github organisations StanJulia, StatisticalRethingJulia and RegressionAndOtherStoriesJulia if no one is interested (and time-wise able!) to take on this work.
+
+I have thoroughly enjoyed working on both Julia and Stan and see both projects mature during the last 15 or so years. And I will always be grateful for the many folks who have helped me on numerous occasions. Both the Julia and the Stan community are awesome to work with! Thanks a lot!
+
 ## Purpose of SR2StanPluto.jl (v5.7)
 
 As stated many times by the author in his [online lectures](https://www.youtube.com/watch?v=ENxTrFf9a7c&list=PLDcUM9US4XdNM4Edgs7weiyIguLSToZRI), StatisticalRethinking is a hands-on course. This project is intended to assist with the hands-on aspect of learning the key ideas in StatisticalRethinking. 
@@ -14,9 +22,9 @@ Tagged version 4.2.0 is the last more or less complete set of scripts covering `
 
 ## Using Pluto's package management (or not!)
 
-For development purposes most notebooks include a line like `#Pkg.activate("~/.julie/dev/SR2StanPluto"))`. On the repo it is commented out. While developing code I typically run notebooks inside a project environment (by uncommenting that line).
+Most notebooks include a line like `#Pkg.activate("~/.julie/dev/SR2StanPluto"))`. On the Github repo it is usualy commented out. While developing code I run notebooks inside a project environment (by uncommenting that line).  Occasionally I update the package (SR2StanPluto) in the REPL when new versions of the project itself or its dependencies become available. It requires SR2StanPluto.jl to be installed (in e.g. `~/.julia/dev` in the above example).
 
-If you frequently switch between notebooks part of this project, uncommenting (or adding) the `Pkg.activate(...)` line is much faster. But that requires SR2StanPluto.jl to be installed in ~/.julia/dev.
+If you frequently switch between different notebooks, uncommenting (or adding) the `Pkg.activate(...)` line is also much faster.
 
 ## Usage
 
@@ -49,46 +57,17 @@ julia> Pluto.run()
 
 All "rethinking" data files are stored and maintained in StatisticalRethinking.jl and can be accessed via `sr_datadir(...)`. See `notebooks/00-Preface.jl` for an example.
 
-In scripts, for naming models and results of simulations I tend to use:
-
-Models and results:
-
-0. stan5_1           : Stan language program
-1. m5_1s             : The sampled StanSample model
-2. q5_1s             : Stan quap model (NamedTuple similar to Turing)
-
-Draws:
-
-3. chns5_1s          : MCMCChains object (4000 samples from 4 chains)
-4. part5_1s          : Stan samples (Particles notation)
-5. quap5_1s          : Quap samples (Particles notation)
-6. nt5_1s            : NamedTuple with samples values
-7. ka5_1s            : KeyedArray object (see AxisArrays.jl)
-8. da5_1s            : DimArray object (see DimensionalData.jl)
-9. st5_1s            : StanTable 0bject (see Tables.jl)
-10. i5_1s            : InferenceObjects (see InferenceObjects.jl)
-
-The default for `read_samples(m1_1s)` is a StanTable chains object.
-
-Results as a DataFrame:
-
-10. prior5_1s_df      : Prior samples (DataFrame)
-11. post5_1s_df       : Posterior samples (DataFrame)
-12. quap5_1s_df       : Quap approximation to posterior samples (DataFrame)
-13. pred5_1s_df       : Posterior predictions (DataFrame)
-
-The `s` at the end indicates Stan.
-
 By default `read_samples(m5_1s)` returns a StanTable with the results. In general
 it is safer to specify the desired format, i.e. `read_samples(m5_1s, :table)` as
 the Julia eco-sytem is still evolving rapidly with new options.
 
 Using `read_samples(m5_1s, :...)` makes it easy to convert samples to other formats.
 
-In version 5 I expect to mainly use the output_formats :dataframe and :namedtuple.
+In version 5 I expect to mainly use the output_formats :dataframe and :nesteddataframe.
 
 For InferenceObjects.jl there is a separate function `inferencedata(m1_1s)`. 
-See the Notebook_Examples in Stan.jl for an example Pluto notebook.
+
+See the [StanExampleNotebooks.jl](https://github.com/StanJulia/StanExampleNotebooks.jl) for an example Pluto notebook.
 
 ## Status
 
@@ -96,7 +75,7 @@ SR2StanPluto.jl is compatible with the 2nd edition of the book. Not all notebook
 
 Beginning with v5.3.0 StructuralCausalModels.jl is repaced by CausalInference.jl as an extension. To display DAGs, GraphViz.jl and CairoMakie.jl are used. This is a long term project!
 
-ParetoSmoothedImportanceSampling.jl are included as experimental dependencies in the StatisticalRethinking.jl v3+ package.
+ParetoSmoothedImportanceSampling.jl is included as a dependency in the StatisticalRethinking.jl v3+ package. 
 
 Definitely WIP! See also below version 5 info.
 
@@ -110,7 +89,11 @@ This repository and format is influenced by previous versions of StatisticalReth
 
 ## Versions
 
-### Version 5.4.0-5.5.1
+### Version 6
+
+1. Updates for chapters 7 and 8 (in SR2).
+
+### Version 5.4.0-5.5.11
 
 1. Further updates in using CausalInference and GraphViz.
 

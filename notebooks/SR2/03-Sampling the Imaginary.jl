@@ -1,11 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
 
 # ╔═╡ 9017fe5b-537c-434a-8a9a-6f55515e0f43
 using Pkg
+
+# ╔═╡ 2ca8f4be-10d4-44bb-81e8-98c57775acc3
+#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ 10249d26-e2b5-4ce5-a87d-4a703e9f3b45
 begin
@@ -35,13 +38,10 @@ html"""
 		margin: 0 auto;
 		max-width: 3500px;
     	padding-left: max(80px, 0%);
-    	padding-right: max(200px, 38%);
+    	padding-right: max(200px, 18%);
 	}
 </style>
 """
-
-# ╔═╡ 2ca8f4be-10d4-44bb-81e8-98c57775acc3
-#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ 3080b453-0a4f-45ef-8e3d-731c44e14b6d
 md"### Julia code snippet 3.1"
@@ -55,6 +55,9 @@ begin
     Pr_Positive = tmp + Pr_Positive_Mortal * (1 - Pr_Vampire)
     Pr_Vampire_Positive = tmp / Pr_Positive
 end
+
+# ╔═╡ 2ee99ea7-d19e-4d80-85e0-f54a69169150
+md" ### 3.1 Sampling from a grid posterior"
 
 # ╔═╡ 542059d8-0152-4add-8c1f-81c76ebef04c
 md"### Julia code snippet 3.2"
@@ -91,6 +94,9 @@ let
 	f
 end
 
+# ╔═╡ 0101294f-f477-49b8-960c-ba26c0ec3b5e
+md" ## 3.2 Sampling to summarize"
+
 # ╔═╡ acbe73d9-75f3-4099-afaa-d1483c6c2323
 md"### Julia code snippet 3.6"
 
@@ -112,27 +118,30 @@ let
 	ax = Axis(f[1, 1]; xlabel="Proportion water (p)", ylabel="Density")
 	lines!(x, pdf.(d, x))
 	x1 = range(0, 0.5; length=100)
-	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5), label = "Label")
+	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5))
 
-	ax = Axis(f[1, 2]; xlabel="Sample number", ylabel="Proportion water (p)")
+	ax = Axis(f[1, 2]; xlabel="Proportion water (p)", ylabel="Density")
 	lines!(x, pdf.(d, x))
 	x1 = range(0.5, 0.75; length=100)
-	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5), label = "Label")
+	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5))
 	
-	ax = Axis(f[2, 1]; xlabel="Sample number", ylabel="Proportion water (p)")
+	ax = Axis(f[2, 1]; xlabel="Proportion water (p)", ylabel="Density")
 	lines!(x, pdf.(d, x))
 	x1 = range(0, 0.75; length=100)
-	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5), label = "Label")
+	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5))
 	
-	ax = Axis(f[2, 2]; xlabel="Sample number", ylabel="Proportion water (p)")
+	ax = Axis(f[2, 2]; xlabel="Proportion water (p)", ylabel="Density")
 	lines!(x, pdf.(d, x))
 	x1 = range(0.45, 0.81; length=100)
-	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5), label = "Label")
+	band!(x1, fill(0, length(x1)), pdf.(d, x1); color = (:darkblue, 0.5))
 	f
 end
 
 # ╔═╡ aaed0560-4c07-49a6-a8a9-80d68d8ebf10
 md"### Julia code snippet 3.8"
+
+# ╔═╡ 20849ab1-4a96-4aa0-bb8e-f8980ecf3950
+sum( 0.5 .< samples1 .< 0.75 ) / length(samples1)
 
 # ╔═╡ 4adccbf1-7d07-4d0f-b5bc-ba77bf591814
 sum(@. (samples1 > 0.5) & (samples1 < 0.75)) / length(samples1)
@@ -169,6 +178,9 @@ md"### Julia code snippet 3.12"
 
 # ╔═╡ 0dc02541-a73e-4913-b740-80ba755ea71c
 percentage_interval = percentile(samples2, [25, 75])
+
+# ╔═╡ e9454d4e-8075-4930-adbe-b4722358805e
+PI(samples2; perc_prob=0.5)
 
 # ╔═╡ 656171b1-d1a4-4e2e-84bf-34efb7f03b4f
 md"### Julia code snippet 3.13"
@@ -277,6 +289,9 @@ let
 	f
 end
 
+# ╔═╡ 5188f158-fa14-4cdc-9b5f-6f21101f13dc
+md" ## 3.3 Sampling to simulate predictions"
+
 # ╔═╡ bc989c65-1e44-4a56-8954-4c48d887349d
 md"### Julia code snippet 3.20"
 
@@ -309,10 +324,10 @@ md"### Julia code snippet 3.24"
 
 # ╔═╡ b2fa1670-f8ad-4d4d-aa6b-d8e0983e4a17
 let
-    dummy_w = rand(Binomial(9, 0.7), 100_000);
+    dummy_w = rand(Binomial(9, 0.7), 100000);
 	f = Figure()
 	ax = Axis(f[1, 1]; xlabel="dummy water count", ylabel="Frequency")
-    hist!(dummy_w)
+    hist!(dummy_w; bins=40)
 	f
 end
 
@@ -339,6 +354,7 @@ w = [rand(Binomial(9, p)) for p in samples2]
 # ╠═10249d26-e2b5-4ce5-a87d-4a703e9f3b45
 # ╟─3080b453-0a4f-45ef-8e3d-731c44e14b6d
 # ╠═7148ccef-6649-4208-8107-bc886315c42f
+# ╟─2ee99ea7-d19e-4d80-85e0-f54a69169150
 # ╟─542059d8-0152-4add-8c1f-81c76ebef04c
 # ╠═524b026e-a281-46ff-8438-bd6968571335
 # ╟─0b948b52-144d-437c-b69d-cff99c901210
@@ -346,12 +362,14 @@ w = [rand(Binomial(9, p)) for p in samples2]
 # ╠═6b5c3871-61e0-44a0-b852-9b2d0820aad2
 # ╟─8169ab77-793d-4e0f-9981-ef0e2ba36508
 # ╠═e78b6f64-61b0-4790-a4a7-e40c5546fd5d
+# ╠═0101294f-f477-49b8-960c-ba26c0ec3b5e
 # ╟─acbe73d9-75f3-4099-afaa-d1483c6c2323
 # ╠═970adc98-dbeb-4454-b6cc-a0fdfa4dc50d
 # ╟─61c51874-f9db-4434-81cb-206be02adb48
 # ╠═d2702ea5-bdad-4daf-8f34-e0a2f0bd9963
 # ╠═47060a12-d34e-404e-956f-b7c6a262c3d7
 # ╟─aaed0560-4c07-49a6-a8a9-80d68d8ebf10
+# ╠═20849ab1-4a96-4aa0-bb8e-f8980ecf3950
 # ╠═4adccbf1-7d07-4d0f-b5bc-ba77bf591814
 # ╟─5e91f0ee-b23e-4ac5-b4cb-c80d1d3a13ba
 # ╠═79a5219e-7a13-473f-b6ca-0f9e3a2c9101
@@ -361,6 +379,7 @@ w = [rand(Binomial(9, p)) for p in samples2]
 # ╠═3cce986c-0fbd-4da0-9c2d-2544e684f584
 # ╟─c3254e98-ac09-46d2-afd1-8968bef00248
 # ╠═0dc02541-a73e-4913-b740-80ba755ea71c
+# ╠═e9454d4e-8075-4930-adbe-b4722358805e
 # ╟─656171b1-d1a4-4e2e-84bf-34efb7f03b4f
 # ╠═1e1eed13-4472-48ef-858b-df4c04ae6269
 # ╠═b35c9437-d664-4af8-872f-08aa9f48958b
@@ -379,6 +398,7 @@ w = [rand(Binomial(9, p)) for p in samples2]
 # ╠═f3eb02e9-31ce-4813-bf0b-43bd31b0948a
 # ╟─2609d3b7-63bf-453b-a1d2-69195c3f2148
 # ╠═0c733bb4-ce48-477b-ac7d-23d2fb2aa7e3
+# ╟─5188f158-fa14-4cdc-9b5f-6f21101f13dc
 # ╟─bc989c65-1e44-4a56-8954-4c48d887349d
 # ╠═275ccd69-e7d5-4a73-8609-c722dec555fa
 # ╟─950611f8-d8c0-41f3-9668-2fb7e8e8cbe0

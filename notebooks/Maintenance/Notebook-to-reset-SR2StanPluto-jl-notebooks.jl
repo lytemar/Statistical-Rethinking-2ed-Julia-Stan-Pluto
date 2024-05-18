@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.40
 
 using Markdown
 using InteractiveUtils
@@ -72,6 +72,11 @@ notebook_files = [
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/06.2-Post-treatment bias.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/06.3-Collider bias.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/06.4-Confronting confounding.jl",
+
+    "~/.julia/dev/SR2StanPluto/notebooks/SR2/07.1-The problem with parameters.jl",
+    "~/.julia/dev/SR2StanPluto/notebooks/SR2/07.1b-The problem with parameters.jl",
+    "~/.julia/dev/SR2StanPluto/notebooks/SR2/07.2-Entropy and accuracy.jl",
+
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/09.1-Good King Markov.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/09.2-Metropolis algorithm.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/SR2/09.3-Hamiltonian Monte Carlo.jl",
@@ -87,6 +92,9 @@ notebook_files = [
     "~/.julia/dev/SR2StanPluto/notebooks/CausalInference/PC Algorithm: Further example.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/CausalInference/PC Algorithm: How it works.jl",
     "~/.julia/dev/SR2StanPluto/notebooks/CausalInference/PC Algorithm: Reasoning about experiments.jl",
+
+    "~/.julia/dev/SR2StanPluto/notebooks/Explorations/02.2-ConjugatePriors.jl",
+    "~/.julia/dev/SR2StanPluto/notebooks/Explorations/03.4-GeneratedQuantities.jl",
 	
 	"~/.julia/dev/SR2StanPluto/notebooks/Maintenance/Notebook-to-reset-SR2StanPluto-jl-notebooks.jl"
 ];

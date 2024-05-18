@@ -30,7 +30,7 @@ end
 md" ## Clip-07-01-04s.jl"
 
 # ╔═╡ 35e702f7-2160-41b4-ac67-b146086cebc4
-md" ### Julia code snippet 7.1"
+md" #### Julia code snippet 7.1"
 
 # ╔═╡ fc516a28-73ab-4dc0-945e-b1c4a6dc29c1
 begin
@@ -61,7 +61,7 @@ begin
 end
 
 # ╔═╡ df6567bf-8b23-4bd9-9a35-e0a553711480
-md" ### Julia code snippet 7.3"
+md" #### Julia code snippet 7.3"
 
 # ╔═╡ 19f0e426-d732-43a4-a5f4-04be6cfd13e9
 stan7_1 = "
@@ -200,7 +200,7 @@ begin
 end
 
 # ╔═╡ f54cd0e3-63ef-4afa-8e80-107b57b758c1
-md" ### Julia code snippet 7.4"
+md" #### Julia code snippet 7.4"
 
 # ╔═╡ bb76ce6f-5c14-4842-9d45-c46a6c8522a6
 m1 = lm(@formula(brain_s ~ mass_s), df)

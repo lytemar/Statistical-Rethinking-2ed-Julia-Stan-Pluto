@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.41
 
 using Markdown
 using InteractiveUtils
@@ -8,7 +8,7 @@ using InteractiveUtils
 using Pkg
 
 # ╔═╡ 2e717b02-0290-49e3-9f67-70f73d760b10
-#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
+Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ d65dd2b2-fc58-11ea-2300-4db47ec9a789
 begin
@@ -38,10 +38,10 @@ end
 md" ## 5.1 - Spurious associations."
 
 # ╔═╡ e875dcfc-fc57-11ea-27e5-c56f1f9d5370
-md"### Julia code snippet 5.1"
+md" #### Julia code snippet 5.1"
 
 # ╔═╡ 234d835c-b651-4b16-9f2e-986eda90a1a8
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ fbc882d4-18b0-4f08-a1b1-ec4c4f78635d
 html"""
@@ -109,7 +109,7 @@ end
 post5_0s_df
 
 # ╔═╡ b26424bf-d206-4fb1-a2ab-222a8ffb80c7
-md"### Julia code snippet 5.2"
+md" #### Julia code snippet 5.2"
 
 # ╔═╡ cb454809-0dd7-4e79-adc6-7a2793090964
 let
@@ -157,10 +157,10 @@ stan5_1_1 = "
 ";
 
 # ╔═╡ f4602d4a-fc59-11ea-0d9d-9f58c73c119f
-md"### Julia code snippet 5.3-4"
+md" #### Julia code snippet 5.3-4"
 
 # ╔═╡ d670aefa-fc58-11ea-1c56-4bfb66e1cab2
-md"## Define the SampleModel, etc."
+md" ## Define the SampleModel, etc."
 
 # ╔═╡ d67e0602-fc58-11ea-3a27-31d03e1c2318
 let
@@ -177,10 +177,10 @@ if success(rc5_1_1s)
 end
 
 # ╔═╡ 12fedbca-fc5a-11ea-2d4d-1d5ac93ac4fa
-md"### Julia code snippet 5.5"
+md" #### Julia code snippet 5.5"
 
 # ╔═╡ 45b2b002-01c6-11eb-3f86-3f9586afcc8b
-md"##### Plot priors of the intercept (`:a`) and the slope (`:bA`)."
+md" ##### Plot priors of the intercept (`:a`) and the slope (`:bA`)."
 
 # ╔═╡ 7f433052-5f29-491d-960d-480bcb836571
 let
@@ -255,7 +255,7 @@ let
 end
 
 # ╔═╡ d69533ba-fc58-11ea-3378-e512a1d55d27
-md"### Julia code snippet 5.6"
+md" #### Julia code snippet 5.6"
 
 # ╔═╡ ee264ad3-947d-4cd7-975e-e0fea7d6b1d4
 stan5_2 = "
@@ -344,7 +344,7 @@ let
 end
 
 # ╔═╡ d6c14359-d723-4dd9-b9a5-fc7b68157be3
-md"### Julia code snippet 5.7"
+md" #### Julia code snippet 5.7"
 
 # ╔═╡ 694ca34c-ebf8-4e5e-bd11-8821a9116e33
 md" ### Using CausalInference.jl and Graphiz.jl"
@@ -425,7 +425,7 @@ est_g.fadjlist
 est_g_edges = [(:A, :M), (:A, :D), (:M, :A), (:D, :A)];
 
 # ╔═╡ 753f5b10-17ea-4e32-9f52-ff174321bcd6
-md" ### Julia code snippet 5.10"
+md" #### Julia code snippet 5.10"
 
 # ╔═╡ 95849e5c-aa0f-4d6f-b618-51e8959496a8
 stan5_3 = "
@@ -466,7 +466,7 @@ if success(rc5_3s)
 end
 
 # ╔═╡ fe796c94-83ba-4b08-a873-099283dfbb15
-md"### Julia code snippet 5.11"
+md" #### Julia code snippet 5.11"
 
 # ╔═╡ a8d4342d-eb5a-4627-9c0b-19bb1c56bcc5
 md"
@@ -482,7 +482,7 @@ if success(rc5_1s) && success(rc5_2s) && success(rc5_3s)
 end
 
 # ╔═╡ 6a2607b5-83a9-4331-a2c6-c16c62872669
-md"### Julia code snippet 5.12"
+md" #### Julia code snippet 5.12"
 
 # ╔═╡ 0d74cfd6-429d-423c-b098-689e2a66c47c
 let
@@ -501,7 +501,7 @@ let
 end
 
 # ╔═╡ c473ea08-a5b9-46b3-9acf-ae903879baca
-md" ### Julia code snippet 5.13"
+md" #### Julia code snippet 5.13"
 
 # ╔═╡ 8df14f30-96fd-4540-bb84-acf398a63706
 stan5_4 = "
@@ -574,7 +574,7 @@ if success(rc5_5s)
 end
 
 # ╔═╡ dff714c3-dad1-4e75-8731-dcdc30e7e01b
-md" ### Julia code snipper 5.14"
+md" #### Julia code snipper 5.14"
 
 # ╔═╡ 5dba7793-47a6-4eaf-9ee8-b865ef3583cc
 let
@@ -737,7 +737,7 @@ end
 	
 
 # ╔═╡ 7cc2addc-77d4-4405-9867-3380f3c36d79
-md" ### Julia code snippet 5.15"
+md" #### Julia code snippet 5.15"
 
 # ╔═╡ 0a68e7e4-bf56-454c-9489-f704d56d374c
 begin
@@ -780,7 +780,7 @@ let
 end
 
 # ╔═╡ da451143-cb64-4bc0-b8f9-8ff4614c521d
-md" ### Julia code snippet 5.19"
+md" #### Julia code snippet 5.19"
 
 # ╔═╡ d6e3deba-5c57-4b8b-bfa4-c81fccd2aa9c
 stan5_3_A = "
@@ -864,13 +864,13 @@ end
 
 
 # ╔═╡ c98dbd9b-9b38-446a-8da9-a7d69ea29956
-md"### Julia code snippet 5.22"
+md" #### Julia code snippet 5.22"
 
 # ╔═╡ 2a353988-ea2c-4d82-8ec7-2c7f0c843f19
 a_seq = range(-2, stop=2, length=30);
 
 # ╔═╡ 33242df0-b647-4974-9cac-b5692ce8100e
-md"### Julia code snippet 5.23"
+md" #### Julia code snippet 5.23"
 
 # ╔═╡ 42f32805-f566-4531-9cd8-b35dc2a3c876
 m_sim, d_sim = simulate(post5_3_As_df, [:aM, :bAM, :sigma_M], a_seq, [:bM, :sigma]);
@@ -896,7 +896,7 @@ let
 end
 
 # ╔═╡ 4a75c36f-3a7f-4d74-9253-6717789d82d6
-md" ### Julia code snippet 5.24"
+md" #### Julia code snippet 5.24"
 
 # ╔═╡ 8c14e485-7a51-4f47-b787-ed6675d80d53
 let
@@ -918,7 +918,7 @@ let
 end
 
 # ╔═╡ 69c6e338-4450-458b-91a6-eeb08f91cb54
-md"##### M -> D"
+md" ##### M -> D"
 
 # ╔═╡ 44ef03ae-e9fa-4de6-a669-b7b5b46b0346
 let

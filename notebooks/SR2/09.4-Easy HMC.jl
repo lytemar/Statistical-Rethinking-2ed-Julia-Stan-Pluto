@@ -91,7 +91,7 @@ begin
 end;
 
 # ╔═╡ 7e5a0f6c-ce4e-47a8-96e9-8bb546a2b6ab
-md"### Code 8.14"
+md" ### Code 8.14"
 
 # ╔═╡ 706cb8f7-dfe9-4e58-98aa-fc8b313844e1
 sdf = read_summary(m8_3s)[8:12, :]

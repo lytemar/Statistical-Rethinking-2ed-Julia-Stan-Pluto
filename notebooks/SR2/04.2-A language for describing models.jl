@@ -1,11 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
 
 # ╔═╡ e2fbf73e-aa3d-4482-917b-dfbecdd6c4b9
 using Pkg
+
+# ╔═╡ 1af0319c-c956-40d8-a6bb-6bfef0e9959e
+#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ ba53534c-c088-4b75-a220-36c09b375978
 begin
@@ -25,10 +28,10 @@ begin
 end
 
 # ╔═╡ 6d8c3db8-1705-45d9-9368-02420ded1371
-md"## Chapter 4.2 A language for describing models."
+md" ## Chapter 4.2 A language for describing models."
 
 # ╔═╡ 462a5453-a918-4649-afb3-6e31c81193cb
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ 0eff3bcb-e3a8-4419-b472-a2e256e04ed3
 html"""
@@ -41,9 +44,6 @@ html"""
 	}
 </style>
 """
-
-# ╔═╡ 1af0319c-c956-40d8-a6bb-6bfef0e9959e
-#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ a6297992-a96d-4c7a-a335-3ac959cdca05
 md"In the book and associated R package `rethinking` statistical models are defined as illustrated below:
@@ -98,7 +98,7 @@ In the code clips I have opted for a less efficient way of computing the quadrat
 "
 
 # ╔═╡ c301a6a8-aaa2-4cf8-a680-8c0d9ac7ea33
-md"##### Introduction to a Stan Language program"
+md" ##### Introduction to a Stan Language program"
 
 # ╔═╡ 9fefcc0b-d027-4824-917e-a6d9e1da6f72
 md"This model represents N experiments each tossing a globe n times and recording the number of times the globe lands on water (`W`) in an array `k`."
@@ -157,7 +157,7 @@ md"
 Unfortunately the names of distributions such as Normal and Binomial are not identical between Stan, R and Julia. The Stan language uses the Stan convention (starts with lower case). Also, each Stan language statement ends with a "
 
 # ╔═╡ c06d1922-06b7-4e90-a88b-b43910e772d2
-md"##### Running a Stan language program in Julia."
+md" ##### Running a Stan language program in Julia."
 
 # ╔═╡ 84e39bed-c969-4955-971b-bab0836e6d87
 md"Once the Stan language model is defined, in this case stored in the Julia variable stan1_1, below steps execute the program:"
@@ -209,7 +209,7 @@ if success(rc1_1s)
 end
 
 # ╔═╡ 34f7e5ab-164c-4c73-a1f3-f5771eac7ca1
-md"### Julia code snippet 4.6"
+md" #### Julia code snippet 4.6"
 
 # ╔═╡ 6bcb5ef8-c053-4ed4-8cff-35acb29c0e90
 let

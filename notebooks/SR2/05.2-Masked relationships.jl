@@ -39,7 +39,7 @@ end
 md" ## 5.2 - Masked relationships."
 
 # ╔═╡ 234d835c-b651-4b16-9f2e-986eda90a1a8
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ fbc882d4-18b0-4f08-a1b1-ec4c4f78635d
 html"""
@@ -54,7 +54,7 @@ html"""
 """
 
 # ╔═╡ b26424bf-d206-4fb1-a2ab-222a8ffb80c7
-md" ### Julia code snippet 5.28"
+md" #### Julia code snippet 5.28"
 
 # ╔═╡ 06c94367-0b94-4aad-9130-01e0770ec821
 begin
@@ -88,7 +88,7 @@ model {
 ";
 
 # ╔═╡ 5f478a40-3e55-4f49-9d90-6de96aeaf92d
-md"##### Define the SampleModel, etc."
+md" ##### Define the SampleModel, etc."
 
 # ╔═╡ cb3c4aea-7b3b-4c93-b807-b4393d7d0b4c
 begin
@@ -120,7 +120,7 @@ let
 end
 
 # ╔═╡ 9f39524d-e4b0-4909-97a0-059bf46386f5
-md"### Julia code snippet 5.35"
+md" #### Julia code snippet 5.35"
 
 # ╔═╡ b35b41bd-8752-4b13-8745-7c24754f6768
 stan5_5_1 = "
@@ -147,7 +147,7 @@ model {
 ";
 
 # ╔═╡ ec590c54-67fc-4d9f-a7bb-f1ec0b126a7f
-md"### Julia code snippet 5.36"
+md" #### Julia code snippet 5.36"
 
 # ╔═╡ b1a7b82a-a981-42fc-9583-3899ba96fe21
 let
@@ -189,7 +189,7 @@ model {
 ";
 
 # ╔═╡ cdbc2c0d-6b74-4765-9ce2-58e4b44adc27
-md"#### Define the SampleModel, etc."
+md" #### Define the SampleModel, etc."
 
 # ╔═╡ bd37996e-4843-42e0-9c5f-6425ecb0f0cd
 let
@@ -206,7 +206,7 @@ begin
 end
 
 # ╔═╡ 9d7eff6e-50c8-41a9-8d54-f726be68f0f1
-md"### Julia code snippet 5.37"
+md" #### Julia code snippet 5.37"
 
 # ╔═╡ eb991545-5c3c-4044-b100-42dad0c98fda
 let
@@ -232,7 +232,7 @@ let
 end
 
 # ╔═╡ 948613ed-57ac-49a7-b758-97edecc20e1e
-md"### Julia code snippet 5.38"
+md" #### Julia code snippet 5.38"
 
 # ╔═╡ a1fb1107-1b3b-4848-bf6f-c36aaf483976
 stan5_5 = "
@@ -330,7 +330,7 @@ begin
 end;
 
 # ╔═╡ 55db7c46-81fa-4eb2-8dbb-37f7ab789e96
-md"### Julia code snippet 5.39"
+md" #### Julia code snippet 5.39"
 
 # ╔═╡ 73fc9756-9b86-4983-8a42-a2c34e6e5358
 if success(rc5_5s) && success(rc5_6s) && success(rc5_7s)
@@ -363,7 +363,7 @@ begin
 end
 
 # ╔═╡ 7d6b1a5d-d3a3-49c2-8553-1e0b9fcade85
-md"### Julia code snippet 5.40"
+md" #### Julia code snippet 5.40"
 
 # ╔═╡ a4b88589-5b0d-442c-8658-55f2331ad242
 let
@@ -475,16 +475,16 @@ let
 end
 
 # ╔═╡ c9463bd4-2b53-46ca-a3b4-e9d0c3b67bee
-md"### Julia code snippet 5.40"
+md" #### Julia code snippet 5.40"
 
 # ╔═╡ 890c3735-429b-4209-abbd-5784d006d652
 a_seq = range(-2, stop=2, length=100);
 
 # ╔═╡ 228a0aa9-93b7-4b69-86e2-94664ef80584
-md"### Julia code snippet 5.41"
+md" #### Julia code snippet 5.41"
 
 # ╔═╡ 19273241-8c10-445b-8b2d-a534000660ac
-md"### Julia code snippet 5.42"
+md" #### Julia code snippet 5.42"
 
 # ╔═╡ c704513f-2d7f-4d9d-ae02-470d582891a4
 post5_7_As_df = read_samples(m5_7_As, :dataframe)
@@ -511,7 +511,7 @@ let
 end
 
 # ╔═╡ 58ea484f-639a-4a5f-9f5d-71f1b72467a4
-md"##### NC -> K"
+md" ##### NC -> K"
 
 # ╔═╡ b02af973-17c2-4feb-a9ae-f0d713bdd584
 begin
@@ -555,7 +555,7 @@ begin
 end
 
 # ╔═╡ 1c3c3e1d-552c-4185-9133-16443c5fa736
-md"### Julia code snippet 5.41-42"
+md" #### Julia code snippet 5.41-42"
 
 # ╔═╡ 2b674d50-8df8-47a3-ad2f-cbd15d557322
 Nobs = 10000;

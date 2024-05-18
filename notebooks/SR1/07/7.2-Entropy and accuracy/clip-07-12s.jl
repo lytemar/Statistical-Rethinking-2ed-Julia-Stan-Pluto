@@ -44,7 +44,7 @@ md" ##### Kullback-Leibler divergence."
 D(p, q) = sum(p .* log.(p ./ q))
 
 # ╔═╡ 5e898a3a-58f4-11eb-1c3d-ef781cf3e9f0
-md" ### Julia code snippet 7.12"
+md" #### Julia code snippet 7.12"
 
 # ╔═╡ 48b01fc0-58f0-11eb-10e1-8969cfc5022f
 begin

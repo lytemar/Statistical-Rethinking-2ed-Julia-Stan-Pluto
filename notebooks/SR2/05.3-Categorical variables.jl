@@ -36,7 +36,7 @@ end
 md" ## 5.3 - Categorical variables."
 
 # ╔═╡ 0217d8d6-fad5-41df-94e3-8f7dc3883f89
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ c26f9f12-ac83-46f7-b46c-6d39c585f10b
 html"""
@@ -51,7 +51,7 @@ html"""
 """
 
 # ╔═╡ 694005d2-df03-490f-ac71-b449c8dd7b1a
-md"### Julia code snippets 5.46"
+md" #### Julia code snippets 5.46"
 
 # ╔═╡ 63a73ce0-c098-4bf2-942f-f5d6e64b0e1d
 begin
@@ -86,7 +86,7 @@ model{
 ";
 
 # ╔═╡ 37eb04f4-8a5b-4a07-8c5f-b0e55b8215cb
-md"### Define the SampleModel, etc."
+md" ### Define the SampleModel, etc."
 
 # ╔═╡ 29820723-606d-4fe3-861d-486cbd8d4921
 begin

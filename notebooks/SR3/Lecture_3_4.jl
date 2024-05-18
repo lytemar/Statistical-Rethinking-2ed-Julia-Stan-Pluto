@@ -24,10 +24,10 @@ begin
 end
 
 # ╔═╡ 00d5774b-5ef0-4d01-b21d-1749beec466a
-md"## SR 2023: Lectures 3 and 4."
+md" ## SR 2023: Lectures 3 and 4."
 
 # ╔═╡ bd8e4305-bb79-409b-9930-e11e579b8cd0
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ da00c7fe-43ff-4e3a-ab43-0dfd9444f779
 html"""
@@ -45,7 +45,7 @@ html"""
 #Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ 0f2f43f6-d3f6-43aa-9624-d2be810a261b
-md"### Julia code snippet 4.7"
+md" #### Julia code snippet 4.7"
 
 # ╔═╡ 591eeff9-52fd-4f9f-8a8a-10d94e49d89c
 begin
@@ -109,7 +109,7 @@ end
 log_lik
 
 # ╔═╡ 9ab25a70-8e23-498b-84c0-cc3fad317188
-md"### Julia code snippet 4.15"
+md" #### Julia code snippet 4.15"
 
 # ╔═╡ c366fcaf-0898-4e00-a0b0-ccd27837a67b
 let

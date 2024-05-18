@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
@@ -30,7 +30,7 @@ end
 md" ## Chapter 0 - Preface of Statistical Rethinking."
 
 # ╔═╡ ea75686e-d3d5-4c55-a8ac-7b0cc7798834
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ 11c5ae87-0890-4099-afc1-51c035196727
 html"""
@@ -39,23 +39,26 @@ html"""
 		margin: 0 auto;
 		max-width: 3500px;
     	padding-left: max(10px, 3%);
-    	padding-right: max(10px, 38%);
+    	padding-right: max(10px, 8%);
 	}
 </style>
 """
 
 
 # ╔═╡ d00abc27-537d-4e8d-8fc5-c7f6c7fb3710
-md" ### Julia code snippet 0.5"
+md" #### Julia code snippet 0.5"
 
 # ╔═╡ 475d7028-47e9-4784-be47-23ca89d7821f
-md"### Julia code snippet 0.1"
+md" #### Julia code snippet 0.1"
+
+# ╔═╡ 08e6014f-cc20-4741-8b18-613e0a3672ee
+"All models are wrong, but some are useful!"
 
 # ╔═╡ 892ca0ca-ad34-4d20-85a5-01b1f8c7a277
 println("All models are wrong, but some are useful!")
 
 # ╔═╡ ef74b60c-f5da-4e35-849e-7282364820d4
-md"### Julia code snippet 0.2"
+md" #### Julia code snippet 0.2"
 
 # ╔═╡ aa4453ae-d34a-406b-be01-0dcb96d6de84
 begin
@@ -64,7 +67,7 @@ begin
 end
 
 # ╔═╡ 3f4c0789-a978-4ce5-bc18-038d4cc4b339
-md"### Julia code snippet 0.3"
+md" #### Julia code snippet 0.3"
 
 # ╔═╡ 35782da0-bad0-4ede-9e62-1527cf4f94ef
 let
@@ -74,13 +77,13 @@ let
 end
 
 # ╔═╡ e99023ce-738c-4277-a3de-278e1fdcc651
-md"### Julia code snippet 0.4"
+md" #### Julia code snippet 0.4"
 
 # ╔═╡ d5f57114-326f-4ee8-b634-77ff05de354a
 cars = CSV.read(sr_datadir("cars.csv"), DataFrame)
 
 # ╔═╡ ee0e953d-80f5-49f9-8e89-f93b957cb421
-md" #### Use GLM."
+md" ##### Use GLM."
 
 # ╔═╡ 1578c482-eac6-4449-89ce-ed2372afe8d2
 cars_lm = lm(@formula(dist ~ speed), cars)
@@ -121,8 +124,8 @@ let
 	fig
 end
 
-# ╔═╡ cd7e70e8-7858-4192-b78d-82020611b875
-md" #### Use Stan."
+# ╔═╡ b7445e96-fb66-4721-a3d2-d26b032a3acf
+md" ##### Below some examples of using Stan, just to get a feel for it."
 
 # ╔═╡ 9206a33f-4c8a-4237-8408-cfab69908a8a
 stan0_0 = "
@@ -165,23 +168,14 @@ end
 # ╔═╡ fef3388e-3ea7-4b1c-8d65-d1ae1aed2ab1
 post0_0s
 
-# ╔═╡ ebb198b7-21b0-4c5d-81c4-e4c6e5ae3880
-md" ##### Quantiles and compatibility range."
-
-# ╔═╡ 95a68c56-cb44-4cb9-a3d8-88b7cd3ab97d
-quantile(post0_0s.b, [0.05, 0.25, 0.50, 0.75, 0.95])
-
-# ╔═╡ 4db453be-21e4-4dd3-ba52-ec11bb4fca2b
-quantile(post0_0s.b, [0.055, 0.945])
-
-# ╔═╡ 8253d342-cde8-47ec-9499-029333184a7a
-hpdi(post0_0s.b)
-
 # ╔═╡ 62a9b89b-1f61-44f5-9387-8b882214209a
-md"##### Extract mean a and b params."
+md" ##### Extract mean a and b params."
 
 # ╔═╡ 31653011-fdec-473c-b2bc-c897540f4e3a
 mean_a, mean_b, mean_sigma = ms0_0s[:, :mean]
+
+# ╔═╡ fd252863-e9e4-46d0-afd0-31a35341381d
+mean(Array(post0_0s); dims=1)
 
 # ╔═╡ bf595f34-f2f5-4852-81a5-d77cf76644cf
 md" ##### Plot residuals."
@@ -198,18 +192,6 @@ let
 	end
 	f
 end
-
-# ╔═╡ 4362e509-66a3-476f-a69f-10f312315c14
-md" #### Below a number of ways to check the sampling process of a Stan Language program."
-
-# ╔═╡ 517ddb5a-51c9-4c6a-aeb0-721c1b5b1280
-read_summary(m0_0s)
-
-# ╔═╡ abb45d1c-a896-48d9-93c1-022022a842c7
-plot_chains(post0_0s, [:a, :b, :sigma])
-
-# ╔═╡ 57a27592-7880-4876-8bf1-31cb97868f3f
-trankplot(post0_0s, "b")
 
 # ╔═╡ f00a4384-c4ea-4372-839a-2bcc5763ab4b
 let
@@ -237,9 +219,6 @@ let
 	fig
 end
 
-# ╔═╡ e3efb80b-34e1-430f-b037-53cc51edf7fc
-md"### Julia code snippet 0.5 - See top of notebook"
-
 # ╔═╡ Cell order:
 # ╟─8d89b043-42d4-4724-b1b5-613bb218c435
 # ╟─ea75686e-d3d5-4c55-a8ac-7b0cc7798834
@@ -249,6 +228,7 @@ md"### Julia code snippet 0.5 - See top of notebook"
 # ╠═c111bf72-e608-4724-ba62-849fec752987
 # ╠═af7e9280-a940-45e8-a2b7-37c7eba21302
 # ╟─475d7028-47e9-4784-be47-23ca89d7821f
+# ╠═08e6014f-cc20-4741-8b18-613e0a3672ee
 # ╠═892ca0ca-ad34-4d20-85a5-01b1f8c7a277
 # ╟─ef74b60c-f5da-4e35-849e-7282364820d4
 # ╠═aa4453ae-d34a-406b-be01-0dcb96d6de84
@@ -256,29 +236,21 @@ md"### Julia code snippet 0.5 - See top of notebook"
 # ╠═35782da0-bad0-4ede-9e62-1527cf4f94ef
 # ╟─e99023ce-738c-4277-a3de-278e1fdcc651
 # ╠═d5f57114-326f-4ee8-b634-77ff05de354a
-# ╟─ee0e953d-80f5-49f9-8e89-f93b957cb421
+# ╠═ee0e953d-80f5-49f9-8e89-f93b957cb421
 # ╠═1578c482-eac6-4449-89ce-ed2372afe8d2
 # ╠═f91514f0-217f-4a0d-b8ba-425705b984e0
 # ╠═dc30aaf5-7f67-4353-966f-533a847f7f5b
 # ╠═266a3df6-3406-4b32-86cb-b83badbca7a8
 # ╠═0234a159-6410-4c08-858f-1191e56e1607
 # ╠═90f8174e-4ea8-45b4-9e88-38c3bd19b5e8
-# ╟─cd7e70e8-7858-4192-b78d-82020611b875
+# ╟─b7445e96-fb66-4721-a3d2-d26b032a3acf
 # ╠═9206a33f-4c8a-4237-8408-cfab69908a8a
 # ╠═d54e4bb7-6370-4d3a-ac0c-62d78bb60744
 # ╠═83a35831-4097-44d6-bb0a-a2e969683a6a
 # ╠═fef3388e-3ea7-4b1c-8d65-d1ae1aed2ab1
-# ╟─ebb198b7-21b0-4c5d-81c4-e4c6e5ae3880
-# ╠═95a68c56-cb44-4cb9-a3d8-88b7cd3ab97d
-# ╠═4db453be-21e4-4dd3-ba52-ec11bb4fca2b
-# ╠═8253d342-cde8-47ec-9499-029333184a7a
 # ╟─62a9b89b-1f61-44f5-9387-8b882214209a
 # ╠═31653011-fdec-473c-b2bc-c897540f4e3a
+# ╠═fd252863-e9e4-46d0-afd0-31a35341381d
 # ╟─bf595f34-f2f5-4852-81a5-d77cf76644cf
 # ╠═d26b5c9a-5912-40fc-9ee4-12c75dd97150
-# ╟─4362e509-66a3-476f-a69f-10f312315c14
-# ╠═517ddb5a-51c9-4c6a-aeb0-721c1b5b1280
-# ╠═abb45d1c-a896-48d9-93c1-022022a842c7
-# ╠═57a27592-7880-4876-8bf1-31cb97868f3f
 # ╠═f00a4384-c4ea-4372-839a-2bcc5763ab4b
-# ╟─e3efb80b-34e1-430f-b037-53cc51edf7fc

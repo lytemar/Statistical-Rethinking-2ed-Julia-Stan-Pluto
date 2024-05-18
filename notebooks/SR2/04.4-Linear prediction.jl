@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.35
+# v0.19.38
 
 using Markdown
 using InteractiveUtils
@@ -23,10 +23,10 @@ begin
 end
 
 # ╔═╡ 4e70810c-ff28-41f3-a8e5-44ba1856f58c
-md"## Chapter 4.4 Linear predictions"
+md" ## Chapter 4.4 Linear predictions"
 
 # ╔═╡ 10b69453-56ac-48bb-b780-1176c6a38e7e
-md"##### Set page layout for notebooks."
+md" ##### Set page layout for notebooks."
 
 # ╔═╡ a6d75e53-c7d7-4888-a46b-87b3f0321ec7
 html"""
@@ -48,7 +48,7 @@ md" ##### Used packages in this notebook."
 #Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ 6e93c98d-55d7-4a30-b9cf-1b411ad7ef3c
-md"### Julia code snippet 4.37"
+md" #### Julia code snippet 4.37"
 
 # ╔═╡ 5e32911e-2aa3-43b1-9741-db17042bf344
 begin
@@ -66,7 +66,7 @@ let
 end
 
 # ╔═╡ b17401c9-c278-4525-8ffd-36b2274115dc
-md"### Julia code snippet 4.38"
+md" #### Julia code snippet 4.38"
 
 # ╔═╡ a23d3abd-3376-4122-b210-a71f1dbbf444
 begin
@@ -77,7 +77,7 @@ begin
 end;
 
 # ╔═╡ 3233d3f9-768a-4197-8b67-ef59e298d133
-md"### Julia code snippet 4.39"
+md" #### Julia code snippet 4.39"
 
 # ╔═╡ 00bc00c5-981c-4158-aeb4-17437ac48fe4
 let
@@ -125,7 +125,7 @@ model {
 ";
 
 # ╔═╡ 021527e0-2917-47bf-87c0-865e25881fef
-md"##### Compute quadratic approximations."
+md" ##### Compute quadratic approximations."
 
 # ╔═╡ 3961ff19-fa00-4268-9d80-f7ee22eee3b7
 # ╠═╡ show_logs = false
@@ -173,13 +173,13 @@ map4_3as
 map4_3bs
 
 # ╔═╡ f5dfab0a-fd89-4d6d-b1a7-da23721458ad
-md"## snippet 4.40"
+md" ## snippet 4.40"
 
 # ╔═╡ 6071f58d-29cc-4acc-83ee-5cc79f8bd230
 Makie.density(rand(LogNormal(0, 1), 4000))
 
 # ╔═╡ 2880d9f6-b2d4-4314-9009-92b61a030c32
-md"### snippets 4.39 & 4.41"
+md" ### snippets 4.39 & 4.41"
 
 # ╔═╡ a3c00d6d-f96e-424a-85cb-5dd17d07c4e1
 let

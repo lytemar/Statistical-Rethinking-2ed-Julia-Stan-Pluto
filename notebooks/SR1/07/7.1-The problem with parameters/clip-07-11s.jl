@@ -118,7 +118,7 @@ for (findx, K) in enumerate([1, 6])
 end;
 
 # ╔═╡ 2389915c-51c7-11eb-15c6-4fe1fa67fbfe
-md" ### Julia code snippet 7.11"
+md" #### Julia code snippet 7.11"
 
 # ╔═╡ eae3bf44-51c6-11eb-19b7-a79473f2bf36
 plot(fig7_4[1], fig7_4[2])

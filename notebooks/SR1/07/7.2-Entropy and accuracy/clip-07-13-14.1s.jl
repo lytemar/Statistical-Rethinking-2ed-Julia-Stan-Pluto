@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.1
+# v0.19.40
 
 using Markdown
 using InteractiveUtils
@@ -22,11 +22,22 @@ begin
 	using StatisticalRethinking
 	using StatisticalRethinkingPlots
 	using RegressionAndOtherStories
-
 end
 
 # ╔═╡ 235c5298-5053-11eb-0608-435d1aa4716c
 md" ## Clip-07-13-14s.jl"
+
+# ╔═╡ 11c5ae87-0890-4099-afc1-51c035196727
+html"""
+<style>
+	main {
+		margin: 0 auto;
+		max-width: 3500px;
+    	padding-left: max(10px, 3%);
+    	padding-right: max(10px, 12%);
+	}
+</style>
+"""
 
 # ╔═╡ 861accd4-5053-11eb-0432-81db212f4f38
 begin
@@ -142,9 +153,9 @@ begin
 end;
 
 # ╔═╡ 95cbb456-520e-11eb-2e0a-1d173ddc9dec
-begin
-	tmpdir = joinpath(projectdir(), "tmp")
-	lppd_res = Matrix{Float64}(undef, 6, 7)
+let
+	global lppd_res = Matrix{Float64}(undef, 6, 7)
+	global m7_2s
 
 	for K in 1:6
 		N = size(df, 1)
@@ -154,9 +165,9 @@ begin
 		# `sigma` should really be `exp(log_sigma)`!
 		
 		if K < 6
-			m7_2s = SampleModel("m7.2s", stan7_2; tmpdir)
+			m7_2s = SampleModel("m7.2s", stan7_2)
 		else
-			m7_2s = SampleModel("m7.2s", stan7_6; tmpdir)
+			m7_2s = SampleModel("m7.2s", stan7_6)
 		end
 		rc7_2s = stan_sample(m7_2s; data=data)
 
@@ -165,11 +176,11 @@ begin
 			post7_2s_df = read_samples(m7_2s, :dataframe)
 		end
 
-		log_lik = nt7_2s.log_lik'
+		global log_lik = nt7_2s.log_lik'
 		lppd_res[K, :] = lppd(log_lik)
 		loo[K], loos[K], pk[K] = psisloo(log_lik)
 		
-		lp = logprob(post7_2s_df, mass, df.brain_std, K)
+		global lp = StatisticalRethinking.logprob(post7_2s_df, mass, df.brain_std, K)
 		deviance[K] = -2sum(lppd(lp))
 	end
 	deviance
@@ -217,6 +228,7 @@ md" ## End of clip-07-13-14s.jl"
 
 # ╔═╡ Cell order:
 # ╟─235c5298-5053-11eb-0608-435d1aa4716c
+# ╠═11c5ae87-0890-4099-afc1-51c035196727
 # ╠═538f05be-5053-11eb-19a0-959e34e1c2a1
 # ╠═5d84f90c-5053-11eb-076b-5f30fc9685e3
 # ╠═861accd4-5053-11eb-0432-81db212f4f38

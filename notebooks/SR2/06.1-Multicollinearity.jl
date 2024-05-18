@@ -34,7 +34,7 @@ end
 md" ## 6.1 - Multicollinearity."
 
 # ╔═╡ 234d835c-b651-4b16-9f2e-986eda90a1a8
-md"##### Set page layout for notebook."
+md" ##### Set page layout for notebook."
 
 # ╔═╡ fbc882d4-18b0-4f08-a1b1-ec4c4f78635d
 html"""
@@ -49,7 +49,7 @@ html"""
 """
 
 # ╔═╡ 4b4ddf89-b54a-4744-a7e2-2c06b0ebcc80
-md"### Julia code snippet 6.01"
+md" #### Julia code snippet 6.01"
 
 # ╔═╡ 9f4b7ba8-802d-4686-bdf3-860381daed91
 let
@@ -151,7 +151,7 @@ if success(rc6_0s)
 end
 
 # ╔═╡ 32defe65-4d99-48b9-be5f-8ef5f6c5ba67
-md"### Julia code snippets 6.02"
+md" #### Julia code snippets 6.02"
 
 # ╔═╡ 620f642e-cf8d-4e14-8a8a-c8174e27ad09
 let
@@ -165,7 +165,7 @@ let
 end;
 
 # ╔═╡ d7230c9d-208e-442c-8668-df7a009baa61
-md"### Julia code snippet 6.03"
+md" #### Julia code snippet 6.03"
 
 # ╔═╡ ce5081a1-9306-4250-b03d-0be07e0b45b5
 stan6_1 = "
@@ -206,7 +206,7 @@ begin
 end
 
 # ╔═╡ 20afccf4-f9e1-4682-b81d-bbb28bedb239
-md" ### Julia code snippet 6.04"
+md" #### Julia code snippet 6.04"
 
 # ╔═╡ 2ae79c69-95a0-4863-ac08-e7b858b6ecb7
 if success(rc6_1s)
@@ -225,7 +225,7 @@ if success(rc6_1s)
 end
 
 # ╔═╡ a4bc4bc8-d981-4e4b-a428-77bda3d48dd5
-md" ### Julia code snippets 6.05 and 6.06"
+md" #### Julia code snippets 6.05 and 6.06"
 
 # ╔═╡ def404fb-e927-4d1b-b7a4-207315dd1913
 let
@@ -250,7 +250,7 @@ let
 end
 
 # ╔═╡ f20df555-79a9-4b27-b634-5d0f6daea0f9
-md" ### Julia code snippet 6.07"
+md" #### Julia code snippet 6.07"
 
 # ╔═╡ 3aa5e3e2-f16a-4144-95d0-3b41e5adea35
 stan6_2 = "
@@ -290,7 +290,7 @@ end
 md" ## Multicollinear milk."
 
 # ╔═╡ 9ec9a4bf-3070-435e-9399-b0ee75758bf4
-md" ### Julia code snippet 6.08"
+md" #### Julia code snippet 6.08"
 
 # ╔═╡ 96bc6f4e-4730-49e1-ad0a-a37a7bbd5774
 begin
@@ -307,7 +307,7 @@ begin
 end
 
 # ╔═╡ f81204eb-0f80-42a9-93c7-e4bf4f5e0f03
-md" ### Julia code snippet 6.09"
+md" #### Julia code snippet 6.09"
 
 # ╔═╡ 59b1d119-35cd-4bc5-8ebc-e432b2804949
 stan6_3 = "
@@ -370,7 +370,7 @@ begin
 end
 
 # ╔═╡ 2c33a5e2-fa00-4f0d-9da9-c43b22e38949
-md" ### Julia code snippet 6.10"
+md" #### Julia code snippet 6.10"
 
 # ╔═╡ d48cd6f8-c16e-455e-9ca2-66d5171efbec
 stan6_5 = "
@@ -415,7 +415,7 @@ let
 end
 
 # ╔═╡ d0927331-80c4-42fd-9afe-893ffe2fd0ed
-md" ### Julia code snippet 6.11"
+md" #### Julia code snippet 6.11"
 
 # ╔═╡ 4c6c6163-0e2a-4ba0-9712-2480a5092fbb
 pairplot(df5)

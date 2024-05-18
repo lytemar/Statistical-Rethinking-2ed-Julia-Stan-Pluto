@@ -7,9 +7,6 @@ using InteractiveUtils
 # ╔═╡ a20974be-c658-11ec-3a53-a185aa9085cb
 using Pkg
 
-# ╔═╡ a280f7d2-6cda-4a71-92e5-8d2c8d0d31ef
-#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
-
 # ╔═╡ 3626cf55-ee2b-4363-95ee-75f2444a1542
 begin
 	using CairoMakie
@@ -32,6 +29,9 @@ html"""
     }
 </style>
 """
+
+# ╔═╡ a280f7d2-6cda-4a71-92e5-8d2c8d0d31ef
+#Pkg.activate(expanduser("~/.julia/dev/SR2StanPluto"))
 
 # ╔═╡ d84f1487-7eec-4a09-94d5-811449380cf5
 stan9_2 = "

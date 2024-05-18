@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.16.1
+# v0.19.40
 
 using Markdown
 using InteractiveUtils
@@ -21,6 +21,7 @@ begin
 	using StanQuap
 	using StatisticalRethinking
 	using StatisticalRethinkingPlots
+	#using RegressionAndOtherStories
 end
 
 # ╔═╡ a4042486-5bf5-11eb-0183-33fd00d868e4
@@ -58,8 +59,8 @@ generated quantities {
 
 # ╔═╡ 00ee9dc0-5c23-11eb-10c3-1dfb4f486e6f
 begin
-	tmpdir = joinpath(projectdir(), "tmp")
-	m7_9s = SampleModel("m7.9s", stan7_9; tmpdir)
+	#tmpdir = joinpath(pwd|(), "tmp")
+	m7_9s = SampleModel("m7.9s", stan7_9)
 end;
 
 # ╔═╡ 5d5b8982-64b2-11eb-0ca9-b94e3197ff31
@@ -72,6 +73,13 @@ begin
 	dev_os = zeros(L, K)
 	res = Vector{NamedTuple}(undef, length(Ns))
 end;
+
+# ╔═╡ 40808dfb-0b92-4e53-990f-0ba18052c651
+let
+	N = 3
+	y, x_train, x_test = sim_train_test(;N, K, rho)
+	(y=y, x_train=x_train, x_test=x_test)
+end
 
 # ╔═╡ 51b7be24-6fad-11eb-3c67-d53dcaf1ada6
 md"
@@ -141,6 +149,9 @@ begin
 	plot(fig..., layout=(1,2))
 end
 
+# ╔═╡ 2e638d8f-2d91-4871-8966-0bd51d85f9aa
+
+
 # ╔═╡ 918392e8-6888-11eb-344d-8d15802cfcac
 res
 
@@ -175,12 +186,14 @@ devs
 
 # ╔═╡ 5e6d444e-6f9f-11eb-2832-558bbc4303dc
 if success(rc7_9s)
-	waic(m7_9s)
+	ndf = read_samples(m7_9s, :nesteddataframe)
+	ll = hcat(ndf.log_lik...)
+	waic(ll; log_lik="log_lik")
 end
 
 # ╔═╡ 66ceb86a-6fa2-11eb-224d-9f617f07019d
 if success(rc7_9s)
-	loo7_9s, loos7_9s, pk7_9s = psisloo(m7_9s)
+	loo7_9s, loos7_9s, pk7_9s = psisloo(ll)
 	-2loo7_9s
 end
 
@@ -202,9 +215,11 @@ md" ## End of clip-07-16-18.1s.jl"
 # ╠═ac8227b2-5bf6-11eb-27dd-09924b99e6c2
 # ╠═00ee9dc0-5c23-11eb-10c3-1dfb4f486e6f
 # ╠═5d5b8982-64b2-11eb-0ca9-b94e3197ff31
+# ╠═40808dfb-0b92-4e53-990f-0ba18052c651
 # ╟─51b7be24-6fad-11eb-3c67-d53dcaf1ada6
 # ╠═f253787c-64c3-11eb-2cd4-9322707100b7
 # ╠═7eb8b028-657f-11eb-0abf-37c3819aea78
+# ╠═2e638d8f-2d91-4871-8966-0bd51d85f9aa
 # ╠═918392e8-6888-11eb-344d-8d15802cfcac
 # ╟─3f775c58-6fa1-11eb-3c36-dd192855ec6b
 # ╠═73872126-6f9d-11eb-027e-e3e81ada62b7
